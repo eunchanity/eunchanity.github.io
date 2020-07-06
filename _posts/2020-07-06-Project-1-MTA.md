@@ -21,32 +21,49 @@ placement of the street teams.
 ---
 ```
 
-### Goal:
+-----
+
+## Contents
+
+- [Introduction](#introduction)
+  - [Goal](#goal)
+  - [Questions to Answer](#questions-to-answer)
+- [Data](#data)
+- [Identifying the Best NY Regions](#identifying-the-best-ny-regions)
+- [Author](#author)
+- [License](#license)
+
+-----
+
+## Introduction
+
+
+### 1. Goal
 * Increase **attendance** at the gala.
 * Maximize **donations** to the organization.
 * Drive **awareness** to the cause.
 
 
-### Questions to Answer:
+### 2. Questions to Answer
 * **Who** is the target population?
 * **Where** is the target population located?
 * **When** are they most present?
 
-### Data Used:
+## Data
 * [NY MTA Turnstile Data](http://web.mta.info/developers/turnstile.html)
 * [US Census Data for NY](https://www.census.gov/quickfacts/fact/table/kingscountybrooklynboroughnewyork,queenscountyqueensboroughnewyork,richmondcountystatenislandboroughnewyork,newyorkcountymanhattanboroughnewyork,bronxcountybronxboroughnewyork,newyorkcitynewyork/PST045219)
 
-### Identifying the Best NY Regions
+## Identifying the Best NY Regions
 
 Percentage of women was **even across boroughs**
-<img src="{{ site.url }}/images/Percentageofwomen.jpg">
+<img src="{{ site.url }}/images/Percentageofwomen.png">
 
 
 High number of women-owned firms in Manhattan, Brooklyn, Queens
-<img src="{{ site.url }}/images/Women_Owned_Firms.jpg">
+<img src="{{ site.url }}/images/Women_Owned_Firms.png">
 
 
 Median income across NY boroughs
-<img src="{{ site.url }}/images/Median_Income.jpg">
+<img src="{{ site.url }}/images/Median_Income.png">
 
 
