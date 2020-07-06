@@ -7,7 +7,7 @@ title: About
 
 I consider myself just an 'Average Joe' that is really fascinated with data and its applications. I aim to ask the **right questions** before any solution and love to **craft stories** out of the raw numbers.  
 
-This blog will mainly contain my projects for the Metis Datascience bootcamp but I will also occasionally include my thoughts about the experience.
+This blog will mainly contain my projects for the Metis Data Science Bootcamp but I will also occasionally include my thoughts about the experience.
 
 ### Contact
 Github:			[https://github.com/eunchanity](https://github.com/eunchanity)<br/>
