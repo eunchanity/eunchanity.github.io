@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Project 1: Exploratory Data Analysis
+title: Project 1 - Exploratory Data Analysis
 ---
 
-## Prompt:
+### Prompt:
 ```
 ---
 A potential client, WomenTechWomenYes(WTWY), has an annual gala at 
@@ -21,14 +21,15 @@ placement of the street teams.
 ---
 ```
 
-## Goal: maximize signatures colelcted for WTWY for their upcoming annual gala.
+### Goal:
 * Increase **attendance** at the gala.
 * Maximize **donations** to the organization.
 * Drive **awareness** to the cause.
 
-## Questions to Answer:
+### Questions to Answer:
 * **Who** is the target population?
 * **Where** is the target population located?
 * **When** are they most present?
 
-## 
+### Data Used:
+* 
