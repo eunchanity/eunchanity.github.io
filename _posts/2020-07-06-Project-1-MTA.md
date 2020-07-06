@@ -26,10 +26,12 @@ placement of the street teams.
 ## Contents
 
 - [Introduction](#introduction)
-  - [Goal](#goal)
-  - [Questions to Answer](#questions-to-answer)
+  - [Goal](#a.-goal)
+  - [Questions to Answer](#b.-questions-to-answer)
 - [Data](#data)
 - [Identifying the Best NY Regions](#identifying-the-best-ny-regions)
+  - [Goal](#goal)
+  - [Questions to Answer](#questions-to-answer)
 - [Author](#author)
 - [License](#license)
 
@@ -37,33 +39,37 @@ placement of the street teams.
 
 ## Introduction
 
-
-### 1. Goal
+### A. Goal
 * Increase **attendance** at the gala.
 * Maximize **donations** to the organization.
 * Drive **awareness** to the cause.
 
-
-### 2. Questions to Answer
+### B. Questions to Answer
 * **Who** is the target population?
 * **Where** is the target population located?
 * **When** are they most present?
+
+-----
 
 ## Data
 * [NY MTA Turnstile Data](http://web.mta.info/developers/turnstile.html)
 * [US Census Data for NY](https://www.census.gov/quickfacts/fact/table/kingscountybrooklynboroughnewyork,queenscountyqueensboroughnewyork,richmondcountystatenislandboroughnewyork,newyorkcountymanhattanboroughnewyork,bronxcountybronxboroughnewyork,newyorkcitynewyork/PST045219)
 
+-----
+
 ## Identifying the Best NY Regions
 
-Percentage of women was **even across boroughs**
+### A. 
+
+1. Percentage of women was **even across boroughs**
 <img src="{{ site.url }}/images/Percentageofwomen.png">
 
 
-High number of women-owned firms in Manhattan, Brooklyn, Queens
+2. High number of women-owned firms in Manhattan, Brooklyn, Queens
 <img src="{{ site.url }}/images/Women_Owned_Firms.png">
 
 
-Median income across NY boroughs
+3. Median income across NY boroughs
 <img src="{{ site.url }}/images/Median_Income.png">
 
 
