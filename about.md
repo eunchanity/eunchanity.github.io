@@ -10,10 +10,8 @@ I consider myself just an 'Average Joe' that is really fascinated with data and 
 This blog will mainly contain my projects for the Metis Data Science Bootcamp but I will also occasionally include my thoughts about the experience.
 
 ### Contact
-Github:			[https://github.com/eunchanity](https://github.com/eunchanity)<br/>
-LinkedIn:       [https://www.linkedin.com/in/davideweon](https://www.linkedin.com/in/davideweon)<br/>
-Email:			[davideweon@gmail.com](<mailto:davideweon@gmail.com>)
+Github:			<a href="https://github.com/eunchanity" target="_blank">https://github.com/eunchanity</a><br/>
+LinkedIn:       <a href="https://www.linkedin.com/in/davideweon" target="_blank">https://www.linkedin.com/in/davideweon</a><br/>
+Email:			<a href="davideweon@gmail.com" target="_blank"><mailto:davideweon@gmail.com></a>
 
 Thanks for reading!
-
-<a href="https://www.linkedin.com/in/davideweon" target="_blank">Hello, world!</a>
