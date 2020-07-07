@@ -29,7 +29,7 @@ placement of the street teams.
   - [Goal](#goal)
   - [Questions to Answer](#questions-to-answer)
 - [Data](#data)
-- [Identifying the Best NYC Regions](#identifying-the-best-ny-regions)
+- [Identifying the Best NYC Regions](#identifying)
   - [Target Population](#target)
   - [Optimal Locations and Time](#optimal)
   	- [Manhattan](#manhattan)
@@ -60,9 +60,9 @@ placement of the street teams.
 
 -----
 
-# Identifying the Best NYC Regions
+# Identifying the Best NYC Regions <a name="identifying"></a>
 
-THe ideal participant will be one that supports the cause, shows up to the gala, and also makes a donation. Using US Census data for NYC, our team located the regions that would have this participant profile.
+The ideal participant will be one that supports the cause, shows up to the gala, and also makes a donation. Using US Census data for NYC, our team located the regions that would have this participant profile.
 
 ## A. Target Population <a name="target"></a>
 
