@@ -16,4 +16,4 @@ Email:			[davideweon@gmail.com](<mailto:davideweon@gmail.com>)
 
 Thanks for reading!
 
-<a href="http://example.com/" target="_blank">Hello, world!</a>
+<a href="https://www.linkedin.com/in/davideweon" target="_blank">Hello, world!</a>
