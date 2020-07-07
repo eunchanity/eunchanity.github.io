@@ -98,7 +98,7 @@ Focusing on the final goal (increase attendance at the gala), our team searched 
 
 ### Brooklyn <a name="brooklyn"></a>
 
-1. **Top 5 stations in Manhattan by total traffic**
+1. **Top 5 stations in Brooklyn by total traffic**
 <img src="{{ site.url }}/images/Brooklyn_Volume.png">
 
 2. **Weekdays have significantly more traffic than weekends**
