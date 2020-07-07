@@ -26,8 +26,8 @@ placement of the street teams.
 ## Contents
 
 - [Introduction](#introduction)
-  - [Goal](#a.-goal)
-  - [Questions to Answer](#b.-questions-to-answer)
+  - [Goal](#goal)
+  - [Questions to Answer](#questions-to-answer)
 - [Data](#data)
 - [Identifying the Best NY Regions](#identifying-the-best-ny-regions)
   - [Goal](#goal)
@@ -37,21 +37,21 @@ placement of the street teams.
 
 -----
 
-## Introduction
+## Introduction <a name="introduction"></a>
 
-### A. Goal
+### A. Goal <a name="goal"></a>
 * Increase **attendance** at the gala.
 * Maximize **donations** to the organization.
 * Drive **awareness** to the cause.
 
-### B. Questions to Answer
+### B. Questions to Answer <a name="questions-to-answer"></a>
 * **Who** is the target population?
 * **Where** is the target population located?
 * **When** are they most present?
 
 -----
 
-## Data
+## Data <a name="data"></a>
 * [NY MTA Turnstile Data](http://web.mta.info/developers/turnstile.html)
 * [US Census Data for NY](https://www.census.gov/quickfacts/fact/table/kingscountybrooklynboroughnewyork,queenscountyqueensboroughnewyork,richmondcountystatenislandboroughnewyork,newyorkcountymanhattanboroughnewyork,bronxcountybronxboroughnewyork,newyorkcitynewyork/PST045219)
 
