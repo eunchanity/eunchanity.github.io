@@ -83,6 +83,8 @@ placement of the street teams.
 
 ## B. Optimal Locations and Time <a name="optimal"></a>
 
+Focusing on the final goal (increase attendance at the gala), our team searched for the stations with the highest foot traffic.
+
 ### Manhattan <a name="manhattan"></a>
 	
 1. **Top 5 stations in Manhattan by total traffic**
