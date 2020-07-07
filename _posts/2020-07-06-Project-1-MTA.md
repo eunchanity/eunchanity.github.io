@@ -64,15 +64,15 @@ placement of the street teams.
 
 ## A. Target Population <a name="target"></a>
 
-1. Percentage of women was generally even across boroughs
+1. **Percentage of women was generally even across boroughs**
 <img src="{{ site.url }}/images/Percentageofwomen.png">
 
 
-2. High number of women-owned firms in Manhattan, Brooklyn, Queens
+2. **High number of women-owned firms in Manhattan, Brooklyn, Queens**
 <img src="{{ site.url }}/images/Women_Owned_Firms.png">
 
 
-3. High median income in Manhattan, Staten Island, Queens
+3. **High median income in Manhattan, Staten Island, Queens**
 <img src="{{ site.url }}/images/Median_Income.png">
 
 * Relaying back to the goals below for this gala, the team decided to focus on **Manhattan** and **Brooklyn**.
@@ -85,24 +85,24 @@ placement of the street teams.
 
 ### Manhattan <a name="manhattan"></a>
 	
-1. Top 5 stations in Manhattan by total traffic
+1. **Top 5 stations in Manhattan by total traffic**
 <img src="{{ site.url }}/images/Manhattan_Volume.png">
 
-2. Weekdays have significantly more traffic than weekends
+2. **Weekdays have significantly more traffic than weekends**
 <img src="{{ site.url }}/images/Manhattan_Daily.png">
 
-3. 8AM - 12PM and 4PM - 8PM time periods have the most traffic
+3. **8AM - 12PM and 4PM - 8PM time periods have the most traffic**
 <img src="{{ site.url }}/images/Manhattan_Hourly.png">
 
 ### Brooklyn <a name="brooklyn"></a>
 
-1. Top 5 stations in Manhattan by total traffic
+1. **Top 5 stations in Manhattan by total traffic**
 <img src="{{ site.url }}/images/Brooklyn_Volume.png">
 
-2. Weekdays have significantly more traffic than weekends
+2. **Weekdays have significantly more traffic than weekends**
 <img src="{{ site.url }}/images/Brooklyn_Daily.png">
 
-3. 8AM - 12PM and 4PM - 8PM time periods have the most traffic
+3. **8AM - 12PM and 4PM - 8PM time periods have the most traffic**
 <img src="{{ site.url }}/images/Brooklyn_Hourly.png">
 
 -----
@@ -111,7 +111,7 @@ placement of the street teams.
 
 ## A. Divide and Conquer <a name="divide"></a>
 
-Sending two teams, one to Manhattan and one to Brooklyn, will optimize the potential outreach based on foot traffic at subway stations across NYC.
+Sending **two teams**, one to Manhattan and one to Brooklyn, will optimize the potential outreach based on foot traffic at subway stations across NYC.
 
 	Manhattan Top 5:
 	1. 34 ST Penn Station
