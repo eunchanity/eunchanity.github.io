@@ -91,7 +91,7 @@ Focusing on the final goal (increase attendance at the gala), our team searched 
 <img src="{{ site.url }}/images/Manhattan_Volume.png">
 
 2. **Weekdays have significantly more traffic than weekends**
-<img src="{{ site.url }}/images/Manhattan_Daily.png">
+<img src="{{ site.url }}/images/Manhattan_Weekly.png">
 
 3. **8AM - 12PM and 4PM - 8PM time periods have the most traffic**
 <img src="{{ site.url }}/images/Manhattan_Hourly.png">
@@ -102,7 +102,7 @@ Focusing on the final goal (increase attendance at the gala), our team searched 
 <img src="{{ site.url }}/images/Brooklyn_Volume.png">
 
 2. **Weekdays have significantly more traffic than weekends**
-<img src="{{ site.url }}/images/Brooklyn_Daily.png">
+<img src="{{ site.url }}/images/Brooklyn_Weekly.png">
 
 3. **8AM - 12PM and 4PM - 8PM time periods have the most traffic**
 <img src="{{ site.url }}/images/Brooklyn_Hourly.png">
