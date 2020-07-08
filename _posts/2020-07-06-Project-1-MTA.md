@@ -37,6 +37,7 @@ placement of the street teams.
 - [Conclusion](#conclusion)
   - [Divide and Conquer](#divide)
   - [Timing is Everything](#timing)
+- [Future Considerations](#future)
 
 -----
 
@@ -136,4 +137,12 @@ Sending **two teams**, one to Manhattan and one to Brooklyn, will optimize the p
 Weekdays see significantly more traffic than weekends - specifically **Tuesday through Friday**.
 
 During the day, stations are the busiest when people are commuting to and from work - specifically **8AM - 12PM** and **4PM - 8PM**.
+
+-----
+
+# Future Considerations <a name="future"></a>
+
+* How effective will outreach actually be in tourist-heavy locations such as Times Square?
+* Given that it is a gala for women in technology, consider where the top tech companies are located in NYC.
+* Collect additional data on the likelihood of both women and men attending and donating at this type of gala.
 
