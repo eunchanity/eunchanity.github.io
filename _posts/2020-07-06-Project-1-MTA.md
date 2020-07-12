@@ -10,11 +10,11 @@ A potential client, WomenTechWomenYes(WTWY), has an annual gala at
 the beginning of the summer and wants to utilize the power of data 
 and analytics to optimize the effectiveness of their street team 
 work. The client is seeking to fill the event space with people 
-passionate about increasing the participation of women in technology,
-and to concurrently build awareness and reach. To this end, 
-they want to strategically place teams at subway station entrances
-to collect email addresses and those who sign up are sent free
-tickets to the gala. 
+passionate about increasing the participation of women in 
+technology, and to concurrently build awareness and reach. To this 
+end, they want to strategically place teams at subway station 
+entrances to collect email addresses and those who sign up are sent 
+free tickets to the gala. 
 
 Utilize the publically available MTA subway data to optimize the 
 placement of the street teams. 
@@ -57,6 +57,9 @@ placement of the street teams.
 
 # Data <a name="data"></a>
 * [NYC MTA Turnstile Data](http://web.mta.info/developers/turnstile.html)
+	*The sample data is from May 2019 to June 2019, several weeks before the gala takes place at the end of June.*
+	*The scenario also assumes that COVID-19 did not occur in 2020.*
+
 * [US Census Data for NYC](https://www.census.gov/quickfacts/fact/table/kingscountybrooklynboroughnewyork,queenscountyqueensboroughnewyork,richmondcountystatenislandboroughnewyork,newyorkcountymanhattanboroughnewyork,bronxcountybronxboroughnewyork,newyorkcitynewyork/PST045219)
 
 -----
