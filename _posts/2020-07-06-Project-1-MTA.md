@@ -56,8 +56,8 @@ placement of the street teams.
 -----
 
 # Data <a name="data"></a>
-* [NYC MTA Turnstile Data](http://web.mta.info/developers/turnstile.html)
-	*The sample data is from May 2019 to June 2019, several weeks before the gala takes place at the end of June.*
+* [NYC MTA Turnstile Data](http://web.mta.info/developers/turnstile.html)<br/>
+	*The sample data is from May 2019 to June 2019, several weeks before the gala takes place at the end of June.*<br/>
 	*The scenario also assumes that COVID-19 did not occur in 2020.*
 
 * [US Census Data for NYC](https://www.census.gov/quickfacts/fact/table/kingscountybrooklynboroughnewyork,queenscountyqueensboroughnewyork,richmondcountystatenislandboroughnewyork,newyorkcountymanhattanboroughnewyork,bronxcountybronxboroughnewyork,newyorkcitynewyork/PST045219)
