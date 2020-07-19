@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Project 1 - Exploratory Data Analysis
+title: Project 1 - Exploratory Data Analysis on MTA Data
 ---
 
 ### Prompt:
