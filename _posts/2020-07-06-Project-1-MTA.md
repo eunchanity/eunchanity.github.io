@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Project 1 - Exploratory Data Analysis on MTA Data
+title: Optimizing Street Marketing with NYC MTA Data
 ---
 
 ### Prompt:
