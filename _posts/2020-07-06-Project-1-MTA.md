@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Optimizing Street Outreach with NYC MTA Data
+title: Optimizing Outreach with NYC MTA Data
 ---
 
 ### Prompt:
