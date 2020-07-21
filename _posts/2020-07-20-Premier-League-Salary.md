@@ -37,7 +37,7 @@ title: Predicting Premier League Players' Salaries with Linear Regression
 # Data <a name="data"></a>
 * <a href="https://fbref.com/en/comps/9/1889/2018-2019-Premier-League-Stats" target="_blank">Premier League 2018-19 Player Data</a><br/>
 
-* <a href="https://www.spotrac.com/epl/" target="_blank">Premier Leauge 2018-19 Player Salaries/</a><br/>
+* <a href="https://www.spotrac.com/epl/" target="_blank">Premier Leauge 2018-19 Player Salaries</a><br/>
 
 -----
 
