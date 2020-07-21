@@ -20,7 +20,13 @@ title: Predicting Premier League Players' Salaries with Linear Regression
 
 -----
 
-# Introduction <a name="introduction"></a>
+# Introduction <a name="introduction"> 
+
+* A little background here, I am a diehard Manchester United fan. I know for a fact that they make and spend a lot of money. In fact, the average salary for a Manchester United player this season was **$7.6 million**. Crazy right? Now imagine my horror when I realized that this was the same team that placed 6th last year, 32 points behind the winners and bitter rivals Manchester City.
+
+* So I wanted to make this presentation for the premier league clubs and managers out there, in the hopes thatthey could invest their money more wisely. What better way to make this argument than through objective, quantitative statistics?
+
+<img src="{{ site.url }}/images/manutdsalary.png">
 
 ## A. Goal <a name="goal"></a>
 * Conduct a **quantitative analysis** between player statistics and player salary
@@ -86,7 +92,10 @@ title: Predicting Premier League Players' Salaries with Linear Regression
 
 # External Factors <a name="external"></a>
 
-* There are factors outside of just the quantitative statistics that currently affect a player's salary. 
+* There are factors outside of just the quantitative statistics that currently affect a player's salary such as:
+	* A club's financial power
+	* A player's popularity
+	* The current transfer market
 
 <img src="{{ site.url }}/images/externalfactors.png">
 
