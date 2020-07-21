@@ -22,11 +22,11 @@ title: Predicting Premier League Players' Salaries with Linear Regression
 
 # Introduction <a name="introduction"> 
 
-* A little background here, I am a diehard Manchester United fan. I know for a fact that they make and spend a lot of money. In fact, the average salary for a Manchester United player this season was **$7.6 million**. Crazy right? Now imagine my horror when I realized that this was the same team that placed 6th last year, 32 points behind the winners and bitter rivals Manchester City.
+* A little background here, I am a die-hard Manchester United fan. I know for a fact that they make and spend a lot of money. In fact, the average salary for a Manchester United player this season was **$7.6 million**. Crazy right? Now imagine my horror when I realized that this was the same team that placed 6th last year, 32 points behind the winners and bitter rivals Manchester City.
 
-* So I wanted to make this presentation for the premier league clubs and managers out there, in the hopes thatthey could invest their money more wisely. What better way to make this argument than through objective, quantitative statistics?
+* So I wanted to make this presentation for the premier league clubs and managers out there, in the hopes that they could invest their money more wisely. What better way to make this argument than through objective, quantitative statistics?
 
-<img src="{{ site.url }}/images/manutdsalary.png">
+<img src="{{ site.url }}/images/manutdsalary.png"> <br/>
 
 ## A. Goal <a name="goal"></a>
 * Conduct a **quantitative analysis** between player statistics and player salary
@@ -57,7 +57,7 @@ title: Predicting Premier League Players' Salaries with Linear Regression
 
 * The number of Premier League players in the 2018-19 season were narrowed down to just 383 players because the player never played in the Premier League and/or the player's salary was unavailable.
 
-<img src="{{ site.url }}/images/premleaguestats.png">
+<img src="{{ site.url }}/images/premleaguestats.png"> <br/>
 
 -----
 
@@ -67,14 +67,14 @@ title: Predicting Premier League Players' Salaries with Linear Regression
 	* Essentially, the data was broken down into **train, validate, and test** sets so that a best-fit model could be identified.<br/>
 	* After some fine tuning with different parameters, the model was then scored on how well its predictions were against the test set.
 
-<img src="{{ site.url }}/images/crossvalidation.png">
+<img src="{{ site.url }}/images/crossvalidation.png"> <br/>
 
 ## Results <a name="results"></a>
 
 * The features (input variables) shown below were the ones that fit the model the best. 
 	* *The starred features were log transformed to better fit the model.*
 
-<img src="{{ site.url }}/images/coefindollar.png">
+<img src="{{ site.url }}/images/coefindollar.png"> <br/>
 
 -----
 
@@ -97,7 +97,7 @@ title: Predicting Premier League Players' Salaries with Linear Regression
 	* A player's popularity
 	* The current transfer market
 
-<img src="{{ site.url }}/images/externalfactors.png">
+<img src="{{ site.url }}/images/externalfactors.png"> <br/>
 
 -----
 
