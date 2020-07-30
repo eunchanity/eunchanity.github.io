@@ -110,4 +110,4 @@ title: Predicting Premier League Players' Salaries with Linear Regression
 -----
 
 # Link to Presentation <a name="link"></a>
-* <a href="https://github.com/eunchanity/davids_repo/tree/master/projects/project2_premierleague_salary/reports" target="_blank">Presentation PDF in Github</a><br/>
+* <a href="https://github.com/eunchanity/davids_repo/blob/master/projects/project2_premierleague_salary/reports/project2_premleague_salary.pdf" target="_blank">Presentation PDF in Github</a><br/>
