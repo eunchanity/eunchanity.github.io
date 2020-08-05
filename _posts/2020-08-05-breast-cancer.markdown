@@ -41,7 +41,7 @@ I want to focus on the term false-positive here - this means that the mammogram 
 ## Questions to Answer: <a name="questions-to-answer"></a>
 
 - Can a benign/malignant tumor be accurately predicted using machine learning?
-- Which tumor characteristics have the greatest effect on malignant probability?
+- Which tumor characteristics have the greatest effect on malignant odds?
 
 ---
 
@@ -86,7 +86,7 @@ You can see above that the confusion matrix is showing that my model did really 
 
 ![Coeffs Bargraph]({{site.baseurl}}/assets/img/coeffs_bargraph.png)
 
-The model coefficients show the relative effect of the characteristics on the probability of a tumor being malignant. The graph shows that cell degradation (represented by bare nuclei) and tumor growth (represented by clump thickness) have the greatest effect on malignant probability. This makes sense as cancers in general are defined by their abnormal growth due to some type of mutation in the cell’s function.
+The model coefficients show the relative effect of the characteristics on the odds of a tumor being malignant. The graph shows that cell degradation (represented by bare nuclei) and tumor growth (represented by clump thickness) have the greatest effect on malignant odds. This makes sense as cancers in general are defined by their abnormal growth due to some type of mutation in the cell’s function.
 
 ---
 
