@@ -2,18 +2,20 @@
 layout: post
 title: "Predicting Benign/Malignant Tumors for Breast Cancer"
 date: 2020-08-05 00:00:20 +0300
-description: Build a linear regression model to predict Premier League players' salaries using quantitative player statistics. # Add post description (optional)
-img: manchester_united.jpg # Add image post (optional)
-tags: [premier-league, machine-learning, linear-regression, salary]
+description: Build a classification model to predict whether a breast cancer cell will be benign or malignant based on cell characteristics. # Add post description (optional)
+img: breastcancer_stat.png # Add image post (optional)
+tags: [machine-learning, breast-cancer, classification]
 ---
 
 # Introduction <a name="introduction">
 
-A little background here, I am a die-hard Manchester United fan. I know for a fact that they make and spend a lot of money. In fact, the <b> average salary for a Manchester United player this season was \$7.6 million </b>. Crazy right? Now imagine my horror when I realized that this was the same team that placed 6th last year, 32 points behind the winners and bitter rivals Manchester City.
+During the course of my bioethics master's program, one of the biggest points of discussion was the ethical spending of healthcare funds. What is the best way to divide up the money? Which population, if any, should be prioritized?
 
-So I wanted to make this presentation for the premier league clubs and managers out there, in the hopes that they could invest their money more wisely. What better way to make this argument than through objective, quantitative statistics?
+One thing that most people agreed on was that given limited resources, the money should be spent in the most effective and efficient way as possible. This meant that the investment should go to the medical procedures and technologies that provided the most return on investment - not only in terms of money but also in terms of patient lives.
 
-![In front of Old Trafford]({{site.baseurl}}/assets/img/manutd_stadium.jpg)
+So it was frustrating to learn that <b>false-positive mammograms</b> and over diagnosis of breast cancer cost <b>\$4 billion in healthcare spending annually</b>. For those that are unaware, a mammogram is an x-ray picture of the breast and it is actually suggested that women get annual screenings beginning at the age of 40.
+
+I want to focus on the term false-positive here - this means that the mammogram is determined to be abnormal even though there’s no cancer. This is happening between <b>22-31% of all diagnoses</b> - a staggering rate. So I wanted to see if a classification model could be used as a more effective and efficient way of determining benign or malignant breast cancer.
 
 # Contents
 
@@ -21,95 +23,89 @@ So I wanted to make this presentation for the premier league clubs and managers 
   - [Goals](#goal)
   - [Questions to Answer](#questions-to-answer)
 - [Data](#data)
-- [Creating a Regression Model](#model)
+- [Creating a Classification Model](#model)
 - [Results](#results)
-- [External Factors](#external)
+- [Key Takeaways](#takeaway)
 - [Future Considerations](#future)
-- [So What?](#sowhat)
 - [Link to Presentation](#link)
 
 ---
 
 ## Goals: <a name="goal"></a>
 
-- Conduct a **quantitative analysis** between player statistics and player salary
-- Build a **linear regression model** that can predict a Premier League player's salary based on his stats
-- Recognize other **external factors** that affect player salary
+- Select a <b>classification model</b> that can predict if a tumor will be benign or malignant:
+  > k-nearest neighbors, logistic regression, decision tree, random forest, gaussian naive bayes, support vector machine
+- Understand the importance of the <b>F1 score</b> for the selected model
+- Recognize how <b>machine learning algorithms</b> can significantly improve diagnoses
 
 ## Questions to Answer: <a name="questions-to-answer"></a>
 
-- Is there a relationship between a player's stats his salary?
-- Which quantitiative statistics affect a player's salary the most?
-- Can a player's salary be accurately predicted using machine learning?
+- Can a benign/malignant tumor be accurately predicted using machine learning?
+- Which tumor characteristics have the greatest effect on malignant probability?
 
 ---
 
 # Data <a name="data"></a>
 
-- <a href="https://fbref.com/en/comps/9/1889/2018-2019-Premier-League-Stats" target="_blank">FB Ref - Premier League 2018-19 Player Data</a>
-- <a href="https://www.spotrac.com/epl/" target="_blank">Spotrac - Premier Leauge 2018-19 Player Salaries</a><br/>
+- <a href="https://archive.ics.uci.edu/ml/datasets/breast+cancer+wisconsin+(original)" target="_blank">Breast Cancer Wisconsin (Original) Dataset</a>
 
-Player statistics were scraped from www.fbref.com and player salaries were scraped from www.spotrac.com.
+I utilized the work of Dr. William Wolberg, whose breast cancer study and dataset were available in the UCI Machine Learning repository. This dataset was used to obtain the scores (1-10) for each tumor characteristic.
 
-9 player statistics were selected across 4 major categories:
+The tumor characteristics were defined as follows:
 
-- Standard: general statistics for a player including goals, minutes played, assists, etc.
-- Shooting: statistics focused on shooting including shots, shot percentage, free kicks, etc.
-- Passing: statistics focused on passing including passes completed, total pass distance, etc.
-- Possession: statistics focused on possession including touches, successful dribbles, pass target, etc.
-
-Some of the tracked statistics were converted to a P90 (stat per 90 minutes) so that each player's ability is judged on a more balanced scale. The number of Premier League players in the 2018-19 season were narrowed down to just <b> 383 players out of a possible total of 577 players </b>. This is because the player either never played a minute of Premier League soccer and/or the player's salary was unavailable.
+- <b>Clump thickness</b>: assesses if cells are mono- or multi-layered
+- <b>Uniformity of cell size</b>: evaluates the consistency in size of cells in sample
+- <b>Marginal adhesion</b>: quantifies how much cells on the outside of the epithelial tend to stick together
+- <b>Single epithelial cell size</b>: relates to cell uniformity, determines if epithelial cells are significantly enlarged
+- <b>Bare nuclei</b>: calculates the proportion of the number of cells not surrounded by cytoplasm to those that are
+- <b>Bland chromatin</b>: rates the uniform “texture” of the nucleus in a range from fine to coarse
+- <b>Normal nucleoli</b>: determines whether the nucleoli are small and barely visible or larger, more visible, and more plentiful
+- <b>Mitoses</b>: describes the level of mitotic (cell reproduction) activity
 
 ---
 
-# Creating a Regression Model <a name="model"></a>
+# Creating a Classification Model <a name="model"></a>
 
-![Heatmap of Features]({{site.baseurl}}/assets/img/heatmap.png)
+![Heatmap of Features]({{site.baseurl}}/assets/img/breastcancer_heatmap.png)
 
-An initial baseline model was created to get a sense of how well the features (player statistics used to predict salary) predicted a player's salary without any tuning. Then, the data was run throuhg multiple regression models including linear, polynomial, ridge, and lasso.
+An initial baseline model was created to get a sense of how well the features (tumor characteristics) predicted a benign/malignant tumor. Then, the data was run through multiple classification models including k-nearest neighbors, logistic regression, decision tree, random forest, gaussian naive bayes, and support vector machine.
 
-In the end, the <b>ridge regression model</b> provided the best R<sup>2</sup> test score:
+In the end, the <b>logistic regression model</b> was selected not only for its high scores, but also for its interpretability.
 
-> <span>R<sup>2</sup> test score: 0.520 </span>
-
-> <span>Mean Squared Error (MSE): 0.14</span>
+![Heatmap of Features]({{site.baseurl}}/assets/img/logit_metrics_bargraph.png)
 
 ---
 
 # Results <a name="results"></a>
 
-![Salary Effects]({{site.baseurl}}/assets/img/premleague_salary.png)
+![Confusion Matrix]({{site.baseurl}}/assets/img/confusionmatrix.png)
 
-The top statistics that affect a Premier League player's salary are ones that are generally associated with either <b>scoring more goals</b> or influencing a team's <b>likelihood of winning</b>. This makes sense - if a player helps you win more games, then you'd probably pay him a higher salary.
+I decided to focus on the F1 score for discussion. Typically, for medical cases, the focus is on the precision score, which focuses on the true positives out of the total positive cases. This means that people want to focus more on correctly diagnosing malignant breast cancer to the patients that actually have malignant breast cancer. This I completely agree with - as many as <b>90,000 women are misdiagnosed per year</b>, which causes significant physical, financial, and psychological harm to patients. However, I’d argue that false negatives are just as damaging to patients, if not more, than false positives. The patient is being told that they don’t have malignant breast cancer but in reality, they do. Thus, I selected the F1 score in order to take into account both important aspects of the diagnosis.
 
-Top Statistics that Impact a Premier League Player's Salary:
+You can see above that the confusion matrix is showing that my model did really well in predicting benign or malignant breast cancer. Both the false positives and false negatives are held really low, making the model a great way to avoid misdiagnoses.
 
-> 1.  Shots on Target P90
-> 2.  Goals P90
-> 3.  Total Pass Completion P90
+![Coeffs Bargraph]({{site.baseurl}}/assets/img/coeffs_bargraph.png)
+
+The model coefficients show the relative effect of the characteristics on the probability of a tumor being malignant. The graph shows that cell degradation (represented by bare nuclei) and tumor growth (represented by clump thickness) have the greatest effect on malignant probability. This makes sense as cancers in general are defined by their abnormal growth due to some type of mutation in the cell’s function.
 
 ---
 
-# External Factors <a name="external"></a>
+# Key Takeaways <a name="takeaway"></a>
 
-Currently, there are factors beyond the stats that affect a player’s salary. For example, <b>richer clubs</b> show drastic differences in revenues, which then affects how well the clubs can pay their players. Also, a player’s <b>marketability</b> can vastly influence his salary. If a player is widely popular with teh fans, the club can afford to pay him a higher salary knowing that they can recoup that money from merchandising, licensing, etc. The <b>volatility of the transfer market</b> can also widely affect a player’s market value, which in turn affects his salary. For example, Pre-COVID19, the market was booming and this allowed PSG to purchase Neymar from FC Barcelona for $263 million, with an annual salary of $53m. However, as of now, clubs are unable to splash the cash and thus, unable to pay high salaries.
+Diagnosing benign or malignant breast cancer can be significantly improved by using machine learning algorithms along with human interpretation. I’m not saying we should completely replace human doctors, but these classification models can provide supporting evidence. At the end of the day, we can all agree that the goal is to improve patient lives.
+
+Also, with the saved costs in decreasing misdiagnoses, the money can be used in other areas of healthcare that may need it more. \$4 billion is a relatively small percentage of the entire US healthcare spending, but its use can still have significant impact. It’s better served in areas such as research rather than misdiagnoses.
 
 ---
 
 # Future Considerations <a name="future"></a>
 
-- Adding players that are not from the Premier League (i.e. La Liga, Bundesliga, Serie A, Ligue 1, etc.)
-- Inputting even more quantitative statistics that are tracked per player.
-- Research on a player's influence outside the game (i.e. marketability score)
-
----
-
-# So What? <a name="sowhat"></a>
-
-The method that I’m proposing is one that is driven by quantitative analysis. If a salary is determined solely by tracked stats and a player’s performance, this could be a great way to standardize how a player’s salary is determined. Currently, salaries are negotiated between a player’s agent and the club. Since so much of this process is unclear, salary inequality often has a negative impact on a team. By standardizing salary negotiations, clubs can avoid overpaying on the market and spending millions on unfruitful gambles.
+- Creating and testing image recognition models on the mammograms themselves. This presentation compared mammograms to tumor samples, which is not exactly an apples to apples comparison.
+- Understand teh cost differences between getting a mammogram and a tumor sampling - including things such as coverage by insurance, result timing, etc.
+- Test my classification model on more recent research and data.
 
 ---
 
 # Link to Presentation <a name="link"></a>
 
-- <a href="https://github.com/eunchanity/davids_repo/blob/master/projects/project2_premierleague_salary/reports/project2_premleague_salary.pdf" target="_blank">Presentation PDF in Github</a><br/>
+- <a href="https://github.com/eunchanity/davids_repo/blob/master/projects/project3_breastcancer/reports/project3_breastcancer.pdf" target="_blank">Presentation PDF in Github</a><br/>

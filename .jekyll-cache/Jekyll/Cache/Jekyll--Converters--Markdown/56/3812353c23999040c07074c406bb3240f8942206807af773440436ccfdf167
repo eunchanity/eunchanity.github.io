@@ -1,0 +1,126 @@
+I"� <h1 id="introduction-">Introduction <a name="introduction"></a></h1>
+
+<p>During the course of my bioethics master’s program, one of the biggest points of discussion was the ethical spending of healthcare funds. What is the best way to divide up the money? Which population, if any, should be prioritized?</p>
+
+<p>One thing that most people agreed on was that given limited resources, the money should be spent in the most effective and efficient way as possible. This meant that the investment should go to the medical procedures and technologies that provided the most return on investment - not only in terms of money but also in terms of patient lives.</p>
+
+<p>So it was frustrating to learn that <b>false-positive mammograms</b> and over diagnosis of breast cancer cost <b>$4 billion in healthcare spending annually</b>. For those that are unaware, a mammogram is an x-ray picture of the breast and it is actually suggested that women get annual screenings beginning at the age of 40.</p>
+
+<p>I want to focus on the term false-positive here - this means that the mammogram is determined to be abnormal even though there’s no cancer. This is happening between <b>22-31% of all diagnoses</b> - a staggering rate. So I wanted to see if a classification model could be used as a more effective and efficient way of determining benign or malignant breast cancer.</p>
+
+<h1 id="contents">Contents</h1>
+
+<ul>
+  <li><a href="#introduction">Introduction</a>
+    <ul>
+      <li><a href="#goal">Goals</a></li>
+      <li><a href="#questions-to-answer">Questions to Answer</a></li>
+    </ul>
+  </li>
+  <li><a href="#data">Data</a></li>
+  <li><a href="#model">Creating a Regression Model</a></li>
+  <li><a href="#results">Results</a></li>
+  <li><a href="#external">External Factors</a></li>
+  <li><a href="#future">Future Considerations</a></li>
+  <li><a href="#sowhat">So What?</a></li>
+  <li><a href="#link">Link to Presentation</a></li>
+</ul>
+
+<hr />
+
+<h2 id="goals-">Goals: <a name="goal"></a></h2>
+
+<ul>
+  <li>Select a <b>classification model</b> that can predict if a tumor will be benign or malignant:
+    <blockquote>
+      <p>k-nearest neighbors, logistic regression, decision tree, random forest, gaussian naive bayes, support vector machine</p>
+    </blockquote>
+  </li>
+  <li>Understand the importance of the <b>F1 score</b> for the selected model</li>
+  <li>Recognize how <b>machine learning algorithms</b> can significantly improve diagnoses</li>
+</ul>
+
+<h2 id="questions-to-answer-">Questions to Answer: <a name="questions-to-answer"></a></h2>
+
+<ul>
+  <li>Can a benign/malignant tumor be accurately predicted using machine learning?</li>
+  <li>Which tumor characteristics have the greatest effect on malignant probability?</li>
+</ul>
+
+<hr />
+
+<h1 id="data-">Data <a name="data"></a></h1>
+
+<ul>
+  <li><a href="https://archive.ics.uci.edu/ml/datasets/breast+cancer+wisconsin+(original)" target="_blank">Breast Cancer Wisconsin (Original) Dataset</a></li>
+</ul>
+
+<p>I utilized the work of Dr. William Wolberg, whose breast cancer study and dataset were available in the UCI Machine Learning repository. This dataset was used to obtain the scores (1-10) for each tumor characteristic.</p>
+
+<p>The tumor characteristics were defined as follows:</p>
+
+<ul>
+  <li><b>Clump thickness</b>: assesses if cells are mono- or multi-layered</li>
+  <li><b>Uniformity of cell size</b>: evaluates the consistency in size of cells in sample</li>
+  <li><b>Marginal adhesion</b>: quantifies how much cells on the outside of the epithelial tend to stick together</li>
+  <li><b>Single epithelial cell size</b>: relates to cell uniformity, determines if epithelial cells are significantly enlarged</li>
+  <li><b>Bare nuclei</b>: calculates the proportion of the number of cells not surrounded by cytoplasm to those that are</li>
+  <li><b>Bland chromatin</b>: rates the uniform “texture” of the nucleus in a range from fine to coarse</li>
+  <li><b>Normal nucleoli</b>: determines whether the nucleoli are small and barely visible or larger, more visible, and more plentiful</li>
+  <li><b>Mitoses</b>: describes the level of mitotic (cell reproduction) activity</li>
+</ul>
+
+<hr />
+
+<h1 id="creating-a-classification-model-">Creating a Classification Model <a name="model"></a></h1>
+
+<p><img src="/assets/img/breastcancer_heatmap.png" alt="Heatmap of Features" /></p>
+
+<p>An initial baseline model was created to get a sense of how well the features (tumor characteristics) predicted a benign/malignant tumor. Then, the data was run through multiple classification models including k-nearest neighbors, logistic regression, decision tree, random forest, gaussian naive bayes, and support vector machine.</p>
+
+<p>In the end, the <b>logistic regression model</b> was selected not only for its high scores, but also for its interpretability.</p>
+
+<p><img src="/assets/img/logit_metrics_bargraph.png" alt="Heatmap of Features" /></p>
+
+<hr />
+
+<h1 id="results-">Results <a name="results"></a></h1>
+
+<p><img src="/assets/img/confusionmatrix.png" alt="Confusion Matrix" /></p>
+
+<p>I decided to focus on the F1 score for discussion. Typically, for medical cases, the focus is on the precision score, which focuses on the true positives out of the total positive cases. This means that people want to focus more on correctly diagnosing malignant breast cancer to the patients that actually have malignant breast cancer. This I completely agree with - as many as <b>90,000 women are misdiagnosed per year</b>, which causes significant physical, financial, and psychological harm to patients. However, I’d argue that false negatives are just as damaging to patients, if not more, than false positives. The patient is being told that they don’t have malignant breast cancer but in reality, they do. Thus, I selected the F1 score in order to take into account both important aspects of the diagnosis.</p>
+
+<p>You can see above that the confusion matrix is showing that my model did really well in predicting benign or malignant breast cancer. Both the false positives and false negatives are held really low, making the model a great way to avoid misdiagnoses.</p>
+
+<p><img src="/assets/img/coeffs_bargraph.png" alt="Coeffs Bargraph" /></p>
+
+<hr />
+
+<h1 id="external-factors-">External Factors <a name="external"></a></h1>
+
+<p>Currently, there are factors beyond the stats that affect a player’s salary. For example, <b>richer clubs</b> show drastic differences in revenues, which then affects how well the clubs can pay their players. Also, a player’s <b>marketability</b> can vastly influence his salary. If a player is widely popular with teh fans, the club can afford to pay him a higher salary knowing that they can recoup that money from merchandising, licensing, etc. The <b>volatility of the transfer market</b> can also widely affect a player’s market value, which in turn affects his salary. For example, Pre-COVID19, the market was booming and this allowed PSG to purchase Neymar from FC Barcelona for $263 million, with an annual salary of $53m. However, as of now, clubs are unable to splash the cash and thus, unable to pay high salaries.</p>
+
+<hr />
+
+<h1 id="future-considerations-">Future Considerations <a name="future"></a></h1>
+
+<ul>
+  <li>Adding players that are not from the Premier League (i.e. La Liga, Bundesliga, Serie A, Ligue 1, etc.)</li>
+  <li>Inputting even more quantitative statistics that are tracked per player.</li>
+  <li>Research on a player’s influence outside the game (i.e. marketability score)</li>
+</ul>
+
+<hr />
+
+<h1 id="so-what-">So What? <a name="sowhat"></a></h1>
+
+<p>The method that I’m proposing is one that is driven by quantitative analysis. If a salary is determined solely by tracked stats and a player’s performance, this could be a great way to standardize how a player’s salary is determined. Currently, salaries are negotiated between a player’s agent and the club. Since so much of this process is unclear, salary inequality often has a negative impact on a team. By standardizing salary negotiations, clubs can avoid overpaying on the market and spending millions on unfruitful gambles.</p>
+
+<hr />
+
+<h1 id="link-to-presentation-">Link to Presentation <a name="link"></a></h1>
+
+<ul>
+  <li><a href="https://github.com/eunchanity/davids_repo/blob/master/projects/project2_premierleague_salary/reports/project2_premleague_salary.pdf" target="_blank">Presentation PDF in Github</a><br /></li>
+</ul>
+:ET

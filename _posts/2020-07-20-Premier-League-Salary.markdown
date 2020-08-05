@@ -53,10 +53,10 @@ Player statistics were scraped from www.fbref.com and player salaries were scrap
 
 9 player statistics were selected across 4 major categories:
 
-- Standard: general statistics for a player including goals, minutes played, assists, etc.
-- Shooting: statistics focused on shooting including shots, shot percentage, free kicks, etc.
-- Passing: statistics focused on passing including passes completed, total pass distance, etc.
-- Possession: statistics focused on possession including touches, successful dribbles, pass target, etc.
+- <b>Standard</b>: general statistics for a player including goals, minutes played, assists, etc.
+- <b>Shooting</b>: statistics focused on shooting including shots, shot percentage, free kicks, etc.
+- <b>Passing</b>: statistics focused on passing including passes completed, total pass distance, etc.
+- <b>Possession</b>: statistics focused on possession including touches, successful dribbles, pass target, etc.
 
 Some of the tracked statistics were converted to a P90 (stat per 90 minutes) so that each player's ability is judged on a more balanced scale. The number of Premier League players in the 2018-19 season were narrowed down to just <b> 383 players out of a possible total of 577 players </b>. This is because the player either never played a minute of Premier League soccer and/or the player's salary was unavailable.
 
@@ -66,7 +66,7 @@ Some of the tracked statistics were converted to a P90 (stat per 90 minutes) so 
 
 ![Heatmap of Features]({{site.baseurl}}/assets/img/heatmap.png)
 
-An initial baseline model was created to get a sense of how well the features (player statistics used to predict salary) predicted a player's salary without any tuning. Then, the data was run throuhg multiple regression models including linear, polynomial, ridge, and lasso.
+An initial baseline model was created to get a sense of how well the features (player statistics used to predict salary) predicted a player's salary without any tuning. Then, the data was run through multiple regression models including linear, polynomial, ridge, and lasso.
 
 In the end, the <b>ridge regression model</b> provided the best R<sup>2</sup> test score:
 
