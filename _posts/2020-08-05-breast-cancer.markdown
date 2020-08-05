@@ -72,15 +72,15 @@ An initial baseline model was created to get a sense of how well the features (t
 
 In the end, the <b>logistic regression model</b> was selected not only for its high scores, but also for its interpretability.
 
-![Heatmap of Features]({{site.baseurl}}/assets/img/logit_metrics_bargraph.png)
-
 ---
 
 # Results <a name="results"></a>
 
-![Confusion Matrix]({{site.baseurl}}/assets/img/confusionmatrix.png)
+![Metric Bargraph]({{site.baseurl}}/assets/img/logit_metrics_bargraph.png)
 
 I decided to focus on the F1 score for discussion. Typically, for medical cases, the focus is on the precision score, which focuses on the true positives out of the total positive cases. This means that people want to focus more on correctly diagnosing malignant breast cancer to the patients that actually have malignant breast cancer. This I completely agree with - as many as <b>90,000 women are misdiagnosed per year</b>, which causes significant physical, financial, and psychological harm to patients. However, I’d argue that false negatives are just as damaging to patients, if not more, than false positives. The patient is being told that they don’t have malignant breast cancer but in reality, they do. Thus, I selected the F1 score in order to take into account both important aspects of the diagnosis.
+
+![Confusion Matrix]({{site.baseurl}}/assets/img/confusionmatrix.png)
 
 You can see above that the confusion matrix is showing that my model did really well in predicting benign or malignant breast cancer. Both the false positives and false negatives are held really low, making the model a great way to avoid misdiagnoses.
 
