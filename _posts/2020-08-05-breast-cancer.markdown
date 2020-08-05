@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Predicting Premier League Players' Salaries"
-date: 2020-07-17 13:32:20 +0300
+title: "Predicting Benign/Malignant Tumors for Breast Cancer"
+date: 2020-08-05 00:00:20 +0300
 description: Build a linear regression model to predict Premier League players' salaries using quantitative player statistics. # Add post description (optional)
 img: manchester_united.jpg # Add image post (optional)
 tags: [premier-league, machine-learning, linear-regression, salary]
