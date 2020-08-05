@@ -17,7 +17,7 @@
     <meta content="Build a linear regression model to predict Premier League players' salaries using quantitative player statistics." property="og:description">
   
   
-    <meta content="http://localhost:4000/Premier-League-Salary/" property="og:url">
+    <meta content="http://localhost:4000/premier-league-salary/" property="og:url">
   
   
     <meta content="2020-07-01T06:32:20-04:00" property="article:published_time">
@@ -48,7 +48,7 @@
     <meta name="twitter:title" content="Predicting Premier League Players' Salaries">
   
   
-    <meta name="twitter:url" content="http://localhost:4000/Premier-League-Salary/">
+    <meta name="twitter:url" content="http://localhost:4000/premier-league-salary/">
   
   
     <meta name="twitter:description" content="Build a linear regression model to predict Premier League players' salaries using quantitative player statistics.">
@@ -168,29 +168,22 @@
 <ul>
   <li><a href="#introduction">Introduction</a>
     <ul>
-      <li><a href="#goal">Goal</a></li>
+      <li><a href="#goal">Goals</a></li>
       <li><a href="#questions-to-answer">Questions to Answer</a></li>
     </ul>
   </li>
   <li><a href="#data">Data</a></li>
-  <li><a href="#model">Creating a Linear Regression Model</a>
-    <ul>
-      <li><a href="#results">Results</a></li>
-    </ul>
-  </li>
-  <li><a href="#takeaway">Key Takeaways</a>
-    <ul>
-      <li><a href="#topstats">Top Statistics that Impact a Premier League Player’s Salary</a></li>
-    </ul>
-  </li>
+  <li><a href="#model">Creating a Regression Model</a></li>
+  <li><a href="#results">Results</a></li>
   <li><a href="#external">External Factors</a></li>
   <li><a href="#future">Future Considerations</a></li>
+  <li><a href="#sowhat">So What?</a></li>
   <li><a href="#link">Link to Presentation</a></li>
 </ul>
 
 <hr />
 
-<h2 id="goal-">Goal <a name="goal"></a></h2>
+<h2 id="goals-">Goals: <a name="goal"></a></h2>
 
 <ul>
   <li>Conduct a <strong>quantitative analysis</strong> between player statistics and player salary</li>
@@ -198,12 +191,12 @@
   <li>Recognize other <strong>external factors</strong> that affect player salary</li>
 </ul>
 
-<h2 id="questions-to-answer-">Questions to Answer <a name="questions-to-answer"></a></h2>
+<h2 id="questions-to-answer-">Questions to Answer: <a name="questions-to-answer"></a></h2>
 
 <ul>
-  <li>Is there a relationship between a player’s stats and a player’s salary?</li>
+  <li>Is there a relationship between a player’s stats his salary?</li>
   <li>Which quantitiative statistics affect a player’s salary the most?</li>
-  <li>Can a player’s salary be accurately predicted?</li>
+  <li>Can a player’s salary be accurately predicted using machine learning?</li>
 </ul>
 
 <hr />
@@ -211,73 +204,64 @@
 <h1 id="data-">Data <a name="data"></a></h1>
 
 <ul>
-  <li><a href="https://fbref.com/en/comps/9/1889/2018-2019-Premier-League-Stats" target="_blank">Premier League 2018-19 Player Data</a></li>
-  <li><a href="https://www.spotrac.com/epl/" target="_blank">Premier Leauge 2018-19 Player Salaries</a><br /></li>
+  <li><a href="https://fbref.com/en/comps/9/1889/2018-2019-Premier-League-Stats" target="_blank">FB Ref - Premier League 2018-19 Player Data</a></li>
+  <li><a href="https://www.spotrac.com/epl/" target="_blank">Spotrac - Premier Leauge 2018-19 Player Salaries</a><br /></li>
 </ul>
 
-<p>Selecting Quantitative Statistics</p>
+<p>Player statistics were scraped from www.fbref.com and player salaries were scraped from www.spotrac.com.</p>
+
+<p>9 player statistics were selected across 4 major categories:</p>
 
 <ul>
-  <li>
-    <p>9 player statistics were selected across 4 major categories:
-_ Standard stats
-_ Shooting stats
-_ Passing stats
-_ Possession stats</p>
-  </li>
-  <li>
-    <p>The number of Premier League players in the 2018-19 season were narrowed down to just 383 players because the player never played in the Premier League and/or the player’s salary was unavailable.</p>
-  </li>
+  <li>Standard: general statistics for a player including goals, minutes played, assists, etc.</li>
+  <li>Shooting: statistics focused on shooting including shots, shot percentage, free kicks, etc.</li>
+  <li>Passing: statistics focused on passing including passes completed, total pass distance, etc.</li>
+  <li>Possession: statistics focused on possession including touches, successful dribbles, pass target, etc.</li>
 </ul>
 
-<p><img src="http://localhost:4000/images/premleaguestats.png" /> <br /></p>
+<p>Some of the tracked statistics were converted to a P90 (stat per 90 minutes) so that each player’s ability is judged on a more balanced scale. The number of Premier League players in the 2018-19 season were narrowed down to just <b> 383 players out of a possible total of 577 players </b>. This is because the player either never played a minute of Premier League soccer and/or the player’s salary was unavailable.</p>
 
 <hr />
 
-<h1 id="creating-a-linear-regression-model-">Creating a Linear Regression Model <a name="model"></a></h1>
+<h1 id="creating-a-regression-model-">Creating a Regression Model <a name="model"></a></h1>
 
-<ul>
-  <li>Machine learning algorithms were used to run the quantitative statistics through multiple regression models. <br />
-_ Essentially, the data was broken down into <strong>train, validate, and test</strong> sets so that a best-fit model could be identified.<br />
-_ After some fine tuning with different parameters, the model was then scored on how well its predictions were against the test set.</li>
-</ul>
+<p><img src="/assets/img/heatmap.png" alt="Heatmap of Features" /></p>
 
-<p><img src="http://localhost:4000/images/crossvalidation.png" /> <br /></p>
+<p>An initial baseline model was created to get a sense of how well the features (player statistics used to predict salary) predicted a player’s salary without any tuning. Then, the data was run throuhg multiple regression models including linear, polynomial, ridge, and lasso.</p>
 
-<h2 id="results-">Results <a name="results"></a></h2>
+<p>In the end, the <b>ridge regression model</b> provided the best R<sup>2</sup> test score:</p>
 
-<ul>
-  <li>The features (input variables) shown below were the ones that fit the model the best. * <em>The starred features were log transformed to better fit the model.</em></li>
-</ul>
+<blockquote>
+  <p><span>R<sup>2</sup> test score: 0.520 </span></p>
+</blockquote>
 
-<p><img src="http://localhost:4000/images/coefindollar.png" /> <br /></p>
+<blockquote>
+  <p><span>Mean Squared Error (MSE): 0.14</span></p>
+</blockquote>
 
 <hr />
 
-<h1 id="key-takeaways-">Key Takeaways <a name="takeaway"></a></h1>
+<h1 id="results-">Results <a name="results"></a></h1>
 
-<ul>
-  <li>The top statistics that affect a Premier League player’s salary are ones that are generally associated with either <strong>scoring more goals</strong> or influencing a team’s <strong>likelihood of winning</strong>. * This makes sense - if a player helps you win more games, then you’d probably pay him a higher salary.</li>
-</ul>
+<p><img src="/assets/img/premleague_salary.png" alt="Salary Effects" /></p>
 
-<h2 id="top-statistics-that-impact-a-premier-league-players-salary-">Top Statistics that Impact a Premier League Player’s Salary: <a name="topstats"></a></h2>
+<p>The top statistics that affect a Premier League player’s salary are ones that are generally associated with either <b>scoring more goals</b> or influencing a team’s <b>likelihood of winning</b>. This makes sense - if a player helps you win more games, then you’d probably pay him a higher salary.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Shots on Target P90
-2. Goals P90
-3. Total Pass Completion P90
-</code></pre></div></div>
+<p>Top Statistics that Impact a Premier League Player’s Salary:</p>
+
+<blockquote>
+  <ol>
+    <li>Shots on Target P90</li>
+    <li>Goals P90</li>
+    <li>Total Pass Completion P90</li>
+  </ol>
+</blockquote>
 
 <hr />
 
 <h1 id="external-factors-">External Factors <a name="external"></a></h1>
 
-<ul>
-  <li>There are factors outside of just the quantitative statistics that currently affect a player’s salary such as:
-_ A club’s financial power
-_ A player’s popularity * The current transfer market</li>
-</ul>
-
-<p><img src="http://localhost:4000/images/externalfactors.png" /> <br /></p>
+<p>Currently, there are factors beyond the stats that affect a player’s salary. For example, <b>richer clubs</b> show drastic differences in revenues, which then affects how well the clubs can pay their players. Also, a player’s <b>marketability</b> can vastly influence his salary. If a player is widely popular with teh fans, the club can afford to pay him a higher salary knowing that they can recoup that money from merchandising, licensing, etc. The <b>volatility of the transfer market</b> can also widely affect a player’s market value, which in turn affects his salary. For example, Pre-COVID19, the market was booming and this allowed PSG to purchase Neymar from FC Barcelona for $263 million, with an annual salary of $53m. However, as of now, clubs are unable to splash the cash and thus, unable to pay high salaries.</p>
 
 <hr />
 
@@ -291,6 +275,12 @@ _ A player’s popularity * The current transfer market</li>
 
 <hr />
 
+<h1 id="so-what-">So What? <a name="sowhat"></a></h1>
+
+<p>The method that I’m proposing is one that is driven by quantitative analysis. If a salary is determined solely by tracked stats and a player’s performance, this could be a great way to standardize how a player’s salary is determined. Currently, salaries are negotiated between a player’s agent and the club. Since so much of this process is unclear, salary inequality often has a negative impact on a team. By standardizing salary negotiations, clubs can avoid overpaying on the market and spending millions on unfruitful gambles.</p>
+
+<hr />
+
 <h1 id="link-to-presentation-">Link to Presentation <a name="link"></a></h1>
 
 <ul>
@@ -300,21 +290,21 @@ _ A player’s popularity * The current transfer market</li>
       <div class="page-footer">
         <div class="page-share">
           <a
-            href="https://twitter.com/intent/tweet?text=Predicting Premier League Players' Salaries&url=http://localhost:4000/Premier-League-Salary/"
+            href="https://twitter.com/intent/tweet?text=Predicting Premier League Players' Salaries&url=http://localhost:4000/premier-league-salary/"
             title="Share on Twitter"
             rel="nofollow"
             target="_blank"
             >Twitter</a
           >
           <a
-            href="https://facebook.com/sharer.php?u=http://localhost:4000/Premier-League-Salary/"
+            href="https://facebook.com/sharer.php?u=http://localhost:4000/premier-league-salary/"
             title="Share on Facebook"
             rel="nofollow"
             target="_blank"
             >Facebook</a
           >
           <a
-            href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/Premier-League-Salary/"
+            href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/premier-league-salary/"
             title="Share on LinkedIn"
             rel="nofollow"
             target="_blank"

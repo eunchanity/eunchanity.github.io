@@ -18,87 +18,81 @@ So I wanted to make this presentation for the premier league clubs and managers 
 # Contents
 
 - [Introduction](#introduction)
-  - [Goal](#goal)
+  - [Goals](#goal)
   - [Questions to Answer](#questions-to-answer)
 - [Data](#data)
-- [Creating a Linear Regression Model](#model)
-  - [Results](#results)
-- [Key Takeaways](#takeaway)
-  - [Top Statistics that Impact a Premier League Player's Salary](#topstats)
+- [Creating a Regression Model](#model)
+- [Results](#results)
 - [External Factors](#external)
 - [Future Considerations](#future)
+- [So What?](#sowhat)
 - [Link to Presentation](#link)
 
 ---
 
-## Goal <a name="goal"></a>
+## Goals: <a name="goal"></a>
 
 - Conduct a **quantitative analysis** between player statistics and player salary
 - Build a **linear regression model** that can predict a Premier League player's salary based on his stats
 - Recognize other **external factors** that affect player salary
 
-## Questions to Answer <a name="questions-to-answer"></a>
+## Questions to Answer: <a name="questions-to-answer"></a>
 
-- Is there a relationship between a player's stats and a player's salary?
+- Is there a relationship between a player's stats his salary?
 - Which quantitiative statistics affect a player's salary the most?
-- Can a player's salary be accurately predicted?
+- Can a player's salary be accurately predicted using machine learning?
 
 ---
 
 # Data <a name="data"></a>
 
-- <a href="https://fbref.com/en/comps/9/1889/2018-2019-Premier-League-Stats" target="_blank">Premier League 2018-19 Player Data</a>
-- <a href="https://www.spotrac.com/epl/" target="_blank">Premier Leauge 2018-19 Player Salaries</a><br/>
+- <a href="https://fbref.com/en/comps/9/1889/2018-2019-Premier-League-Stats" target="_blank">FB Ref - Premier League 2018-19 Player Data</a>
+- <a href="https://www.spotrac.com/epl/" target="_blank">Spotrac - Premier Leauge 2018-19 Player Salaries</a><br/>
 
-Selecting Quantitative Statistics
+Player statistics were scraped from www.fbref.com and player salaries were scraped from www.spotrac.com.
 
-- 9 player statistics were selected across 4 major categories:
-  _ Standard stats
-  _ Shooting stats
-  _ Passing stats
-  _ Possession stats
+9 player statistics were selected across 4 major categories:
 
-- The number of Premier League players in the 2018-19 season were narrowed down to just 383 players because the player never played in the Premier League and/or the player's salary was unavailable.
+- Standard: general statistics for a player including goals, minutes played, assists, etc.
+- Shooting: statistics focused on shooting including shots, shot percentage, free kicks, etc.
+- Passing: statistics focused on passing including passes completed, total pass distance, etc.
+- Possession: statistics focused on possession including touches, successful dribbles, pass target, etc.
 
-<img src="{{ site.url }}/images/premleaguestats.png"> <br/>
-
----
-
-# Creating a Linear Regression Model <a name="model"></a>
-
-- Machine learning algorithms were used to run the quantitative statistics through multiple regression models. <br/>
-  _ Essentially, the data was broken down into **train, validate, and test** sets so that a best-fit model could be identified.<br/>
-  _ After some fine tuning with different parameters, the model was then scored on how well its predictions were against the test set.
-
-<img src="{{ site.url }}/images/crossvalidation.png"> <br/>
-
-## Results <a name="results"></a>
-
-- The features (input variables) shown below were the ones that fit the model the best. \* _The starred features were log transformed to better fit the model._
-
-<img src="{{ site.url }}/images/coefindollar.png"> <br/>
+Some of the tracked statistics were converted to a P90 (stat per 90 minutes) so that each player's ability is judged on a more balanced scale. The number of Premier League players in the 2018-19 season were narrowed down to just <b> 383 players out of a possible total of 577 players </b>. This is because the player either never played a minute of Premier League soccer and/or the player's salary was unavailable.
 
 ---
 
-# Key Takeaways <a name="takeaway"></a>
+# Creating a Regression Model <a name="model"></a>
 
-- The top statistics that affect a Premier League player's salary are ones that are generally associated with either **scoring more goals** or influencing a team's **likelihood of winning**. \* This makes sense - if a player helps you win more games, then you'd probably pay him a higher salary.
+![Heatmap of Features]({{site.baseurl}}/assets/img/heatmap.png)
 
-## Top Statistics that Impact a Premier League Player's Salary: <a name="topstats"></a>
+An initial baseline model was created to get a sense of how well the features (player statistics used to predict salary) predicted a player's salary without any tuning. Then, the data was run throuhg multiple regression models including linear, polynomial, ridge, and lasso.
 
-    1. Shots on Target P90
-    2. Goals P90
-    3. Total Pass Completion P90
+In the end, the <b>ridge regression model</b> provided the best R<sup>2</sup> test score:
+
+> <span>R<sup>2</sup> test score: 0.520 </span>
+
+> <span>Mean Squared Error (MSE): 0.14</span>
+
+---
+
+# Results <a name="results"></a>
+
+![Salary Effects]({{site.baseurl}}/assets/img/premleague_salary.png)
+
+The top statistics that affect a Premier League player's salary are ones that are generally associated with either <b>scoring more goals</b> or influencing a team's <b>likelihood of winning</b>. This makes sense - if a player helps you win more games, then you'd probably pay him a higher salary.
+
+Top Statistics that Impact a Premier League Player's Salary:
+
+> 1.  Shots on Target P90
+> 2.  Goals P90
+> 3.  Total Pass Completion P90
 
 ---
 
 # External Factors <a name="external"></a>
 
-- There are factors outside of just the quantitative statistics that currently affect a player's salary such as:
-  _ A club's financial power
-  _ A player's popularity \* The current transfer market
-
-<img src="{{ site.url }}/images/externalfactors.png"> <br/>
+Currently, there are factors beyond the stats that affect a player’s salary. For example, <b>richer clubs</b> show drastic differences in revenues, which then affects how well the clubs can pay their players. Also, a player’s <b>marketability</b> can vastly influence his salary. If a player is widely popular with teh fans, the club can afford to pay him a higher salary knowing that they can recoup that money from merchandising, licensing, etc. The <b>volatility of the transfer market</b> can also widely affect a player’s market value, which in turn affects his salary. For example, Pre-COVID19, the market was booming and this allowed PSG to purchase Neymar from FC Barcelona for $263 million, with an annual salary of $53m. However, as of now, clubs are unable to splash the cash and thus, unable to pay high salaries.
 
 ---
 
@@ -107,6 +101,12 @@ Selecting Quantitative Statistics
 - Adding players that are not from the Premier League (i.e. La Liga, Bundesliga, Serie A, Ligue 1, etc.)
 - Inputting even more quantitative statistics that are tracked per player.
 - Research on a player's influence outside the game (i.e. marketability score)
+
+---
+
+# So What? <a name="sowhat"></a>
+
+The method that I’m proposing is one that is driven by quantitative analysis. If a salary is determined solely by tracked stats and a player’s performance, this could be a great way to standardize how a player’s salary is determined. Currently, salaries are negotiated between a player’s agent and the club. Since so much of this process is unclear, salary inequality often has a negative impact on a team. By standardizing salary negotiations, clubs can avoid overpaying on the market and spending millions on unfruitful gambles.
 
 ---
 
