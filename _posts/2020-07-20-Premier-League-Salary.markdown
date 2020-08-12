@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Predicting Premier League Players' Salaries"
+title: "Predicting Premier League Players' Salaries using Machine Learning"
 date: 2020-07-17 13:32:20 +0300
 description: Build a linear regression model to predict Premier League players' salaries using quantitative player statistics. # Add post description (optional)
 img: manchester_united.jpg # Add image post (optional)
