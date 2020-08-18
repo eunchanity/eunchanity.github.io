@@ -25,6 +25,7 @@ I want to focus on the term false-positive here - this means that the mammogram 
 - [Data](#data)
 - [Creating a Classification Model](#model)
 - [Results](#results)
+  - [Flask App Demo](#flask)
 - [Key Takeaways](#takeaway)
 - [Future Considerations](#future)
 - [Link to Presentation](#link)
@@ -87,6 +88,12 @@ You can see above that the confusion matrix is showing that my model did really 
 ![Coeffs Bargraph]({{site.baseurl}}/assets/img/coeffs_bargraph.png)
 
 The model coefficients show the relative effect of the characteristics on the odds of a tumor being malignant. The graph shows that cell degradation (represented by bare nuclei) and tumor growth (represented by clump thickness) have the greatest effect on malignant odds. This makes sense as cancers in general are defined by their abnormal growth due to some type of mutation in the cell’s function.
+
+## Flask App Demo <a name="flask"></a>
+
+<iframe width="420" height="315" src="https://youtu.be/4mX-nvs8-VY" frameborder="0" allowfullscreen></iframe>
+
+This is a flask app that I created to demonstrate the effects of the characteristics on the odds of a tumor being benign or malignant. Just like the graph above, the app reinforces the idea that cell degradation and tumor growth have the greatest effect on malignant odds.
 
 ---
 
