@@ -108,7 +108,9 @@ This is a flask app that I created to demonstrate the effects of the characteris
 # Future Considerations <a name="future"></a>
 
 - Creating and testing image recognition models on the mammograms themselves. This presentation compared mammograms to tumor samples, which is not exactly an apples to apples comparison.
-- Understand teh cost differences between getting a mammogram and a tumor sampling - including things such as coverage by insurance, result timing, etc.
+
+- Understand the cost differences between getting a mammogram and a tumor sampling - including things such as coverage by insurance, result timing, etc.
+
 - Test my classification model on more recent research and data.
 
 ---

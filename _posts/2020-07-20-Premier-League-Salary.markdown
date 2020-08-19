@@ -103,14 +103,16 @@ Currently, there are factors beyond the stats that affect a player’s salary. <
 # Future Considerations <a name="future"></a>
 
 - Adding players that are not from the Premier League (i.e. La Liga, Bundesliga, Serie A, Ligue 1, etc.)
+
 - Inputting even more quantitative statistics that are tracked per player.
+
 - Research on a player's influence outside the game (i.e. marketability score)
 
 ---
 
 # So What? <a name="sowhat"></a>
 
-The method that I’m proposing is one that is driven by quantitative analysis. If a salary is determined solely by tracked stats and a player’s performance, this could be a great way to standardize how a player’s salary is determined. Currently, salaries are negotiated between a player’s agent and the club. Since so much of this process is unclear, salary inequality often has a negative impact on a team. By standardizing salary negotiations, clubs can avoid overpaying on the market and spending millions on unfruitful gambles.
+The method that I’m proposing is one that is <b>driven by quantitative analysis</b>. If a salary is determined solely by tracked stats and a player’s performance, this could be a great way to standardize how a player’s salary is determined. Currently, salaries are negotiated between a player’s agent and the club. Since so much of this process is unclear, salary inequality often has a negative impact on a team. By standardizing salary negotiations, clubs can avoid overpaying on the market and spending millions on unfruitful gambles.
 
 ---
 
