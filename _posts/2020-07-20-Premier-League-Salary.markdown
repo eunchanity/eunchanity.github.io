@@ -95,7 +95,9 @@ Top Statistics that Impact a Premier League Player's Salary:
 Currently, there are factors beyond the stats that affect a player’s salary. <br/>
 
 - For example, <b>richer clubs</b> show drastic differences in revenues, which then affects how well the clubs can pay their players.
+
 - Also, a player’s <b>marketability</b> can vastly influence his salary. If a player is widely popular with teh fans, the club can afford to pay him a higher salary knowing that they can recoup that money from merchandising, licensing, etc.
+
 - The <b>volatility of the transfer market</b> can also widely affect a player’s market value, which in turn affects his salary. For example, Pre-COVID19, the market was booming and this allowed PSG to purchase Neymar from FC Barcelona for $263 million, with an annual salary of $53m. However, as of now, clubs are unable to splash the cash and thus, unable to pay high salaries.
 
 ---
@@ -103,9 +105,7 @@ Currently, there are factors beyond the stats that affect a player’s salary. <
 # Future Considerations <a name="future"></a>
 
 - Adding players that are not from the Premier League (i.e. La Liga, Bundesliga, Serie A, Ligue 1, etc.)
-
 - Inputting even more quantitative statistics that are tracked per player.
-
 - Research on a player's influence outside the game (i.e. marketability score)
 
 ---
