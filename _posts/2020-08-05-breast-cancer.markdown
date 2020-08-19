@@ -99,9 +99,9 @@ This is a flask app that I created to demonstrate the effects of the characteris
 
 # Key Takeaways <a name="takeaway"></a>
 
-Diagnosing benign or malignant breast cancer can be significantly improved by using machine learning algorithms along with human interpretation. I’m not saying we should completely replace human doctors, but these classification models can provide supporting evidence. At the end of the day, we can all agree that the goal is to improve patient lives.
+- Using <b> machine learning algorithms along with human interpretation </b> can significantly improve breast cancer diagnoses. I’m not saying we should completely replace human doctors, but these classification models can provide supporting evidence. At the end of the day, we can all agree that the goal is to improve patient lives.
 
-Also, with the saved costs in decreasing misdiagnoses, the money can be used in other areas of healthcare that may need it more. \$4 billion is a relatively small percentage of the entire US healthcare spending, but its use can still have significant impact. It’s better served in areas such as research rather than misdiagnoses.
+- Also, with the <b> saved costs in decreasing misdiagnoses </b>, the money can be used in other areas of healthcare that may need it more. \$4 billion is a relatively small percentage of the entire US healthcare spending, but its use can still have significant impact. It’s better served in areas such as research rather than misdiagnoses.
 
 ---
 
