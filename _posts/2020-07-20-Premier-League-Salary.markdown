@@ -4,7 +4,7 @@ title: "Predicting Premier League Players' Salaries with Machine Learning"
 date: 2020-07-17 13:32:20 +0300
 description: Build a linear regression model to predict Premier League players' salaries using quantitative player statistics. # Add post description (optional)
 img: manchester_united.jpg # Add image post (optional)
-fig-caption: <a href="https://fbref.com/en/comps/9/1889/2018-2019-Premier-League-Stats" target="_blank">FB Ref - Premier League 2018-19 Player Data</a>
+fig-caption: <a href="https://www.gettyimages.ae/detail/news-photo/manchester-united-celebrate-winning-the-barclays-premier-news-photo/87412803" target="_blank">Image Source</a>
 tags: [premier-league, machine-learning, linear-regression, salary]
 ---
 

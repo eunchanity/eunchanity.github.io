@@ -4,6 +4,7 @@ title: "Flexible Jekyll Theme"
 date: 2020-07-01 13:32:20 +0300
 description: You’ll find this post in the `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img: github-pages.png # Add image post (optional)
+fig-caption: <a href="https://www.jonathan-petitcolas.com/2012/12/25/migrating-to-github-pages.html" target="_blank">Image Source</a>
 tags: [jekyll, github, theme, flexible-jekyll]
 ---
 
