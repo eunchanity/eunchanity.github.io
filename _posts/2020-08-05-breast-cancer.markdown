@@ -4,6 +4,7 @@ title: "Classifying Breast Cancer Tumors with Machine Learning"
 date: 2020-08-05 00:00:20 +0300
 description: Build a classification model to predict whether a breast cancer cell will be benign or malignant based on cell characteristics. # Add post description (optional)
 img: breastcancer_stat.png # Add image post (optional)
+fig-caption: "https://www.nationalbreastcancer.org/breast-cancer-facts"
 tags: [machine-learning, breast-cancer, classification]
 ---
 
