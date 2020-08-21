@@ -1,0 +1,155 @@
+---
+layout: post
+title: "Creating a Mystery Basket Generator from the TV Show Chopped"
+date: 2020-08-21 10:32:20 +0300
+description: Use natural langauge processing (NLP) and unsupervised learning to create a recommendation system that generates a random Chopped basket. # Add post description (optional)
+img: chopped.jpeg # Add image post (optional)
+fig-caption: <a href="https://www.foodnetwork.com/shows/chopped" target="_blank">Image Source</a>
+tags: [machine-learning, chopped, unsupervised learning, NLP, recommender]
+---
+
+# Introduction <a name="introduction">
+
+Chopped is a cooking series on the Food Network program that invites four chefs to come and cook dishes based on the ingredients in a mystery basket. There are three rounds (appetizer, entree, dessert) and one chef is eliminated each round based on the judges’ decision. What makes this show really interesting is that the mystery baskets have ingredients that you would think are impossible to combine to make an edible dish. However, Food Network has revealed that there is actually a culinary department that predetermines these baskets, which are just hard enough for the contestants.
+
+> "They don't want to make a basket that's impossible, just incredibly difficult."
+>
+> - Ted Allen, Host of Chopped
+
+![chopped]({{site.baseurl}}/assets/img/this-is-a-cooking-show-not-a-crying-show.png)
+
+This effort is probably why the show is so fun to watch and perhaps even intense. Given the seemingly random nature of these mystery baskets, I wanted to see if it was possible to draw out some pattern in the ingredients by clustering them. With those clusters, I decided to make my own Chopped basket recommender using all the ingredients that have ever appeared on the show so far.
+
+# Contents
+
+- [Introduction](#introduction)
+  - [Goals](#goal)
+  - [Questions to Answer](#questions-to-answer)
+- [Data](#data)
+- [Word Embedding](#model)
+- [Clustering](#clustering)
+- [Results](#results)
+  - [Streamlit App Demo](#streamlit)
+- [Key Takeaways](#takeaway)
+- [Future Considerations](#future)
+- [Link to Presentation](#link)
+
+---
+
+## Goals: <a name="goal"></a>
+
+- Use <b>word embedding</b> to convert each individual ingredient into vectors
+  > word2vec
+- Select a <b>clustering model</b> that will group the ingredients for labeling:
+  > k-means clustering, hierarchical clustering
+- Understand the importance of <b>human intuition</b> for food relationships
+- Deploy an app that generates a Chopped Mystery Basket
+
+## Questions to Answer: <a name="questions-to-answer"></a>
+
+- Are there specific food groups that make up the Chopped Mystery Basket? Or is it just a random set of ingredients?
+- Can food and its relationship to other foods be accurately captured by machine learning algorithms?
+- Can the Chopped Mystery Baskets be recreated using machine learning?
+
+---
+
+# Data <a name="data"></a>
+
+- <a href="https://www.kaggle.com/jeffreybraun/chopped-10-years-of-episode-data" target="_blank">Chopped: 10+ Years of Episode Data</a>
+
+I utilized the above dataset from Kaggle, which contained the details of every Chopped episode for the past ten years. From this, I used the information for the appetizer, entree, and dessert baskets and pulled the individual ingredients out from there using natural language processing (NLP).
+
+---
+
+# Word Embedding <a name="model"></a>
+
+Given that the "documents" in my corpus were just single ingredients, I decided to use <b>word2vec</b> for my word embedding.
+
+I created a <b>gensim model</b> by using Google's publicly available pre-trained word embeddings.
+
+> This can be downloaded here <a href="https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit" target="_blank">https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit</a>
+> Just note that this will require ~4GB of RAM to fit in memory
+
+Essentially, word2vec puts each ingredient into a 300-dimensional space (a vector that has 300 values) and this allows us to get some type of meaning/relationship between the words. By utilizing this model, you can see which words are most similar to each other. This idea was used for my <b>similar ingredient recommender</b>, which is explained below.
+
+![word2vec]({{site.baseurl}}/assets/img/word2vec.png)
+
+---
+
+# Clustering <a name="clustering"></a>
+
+![clustering]({{site.baseurl}}/assets/img/kmeansclusters.png)
+
+After comparing <b>k-means clustering</b> with a few hierarchical clustering models, I ended up using k-means. Within this model, I found the optimal k by using the <b>silhouette score</b>. This was done separately for appetizer, entree, and dessert, which resulted in a different optimal cluster number for each round type.
+
+---
+
+# Results <a name="results"></a>
+
+![appetizers]({{site.baseurl}}/assets/img/appetizer_results.jpg)
+
+![entrees]({{site.baseurl}}/assets/img/entree_results.jpg)
+
+![desserts]({{site.baseurl}}/assets/img/dessert_results.jpg)
+
+This is a snapshot of the results for each round type. Obviously there are more than three ingredients per cluster but as you can see, there were some clear patterns in each group.
+
+The <b>appetizer round</b> resulted in six clusters:
+
+- Sauce / Garnish
+- Processed / Sweets
+- Seafood
+- Protein / Carbs
+- Vegetables
+- Fruits
+
+The <b>entree round</b> resulted in four clusters:
+
+- Fruits / Vegetables
+- Seafood
+- Random
+- Protein / Carbs
+
+The <b>dessert round</b> result in five clusters:
+
+- Fruits / Vegetables
+- Liquids
+- Dairy / Sauces
+- Random
+- Sugar / Snacks
+
+## Streamlit App Demo <a name="streamlit"></a>
+
+<iframe width="600" height="425" src="https://www.youtube.com/embed/Ul8VTvOZM14" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Using this data, I deployed a Streamlit app that takes in user input for each round. Here you can see that the user is able to select the types of food they want to include in their basket. Then, the generator creates a basket of four random ingredients from the selected clusters/food groups.
+
+You can also see towards the bottom that there is a <b>similar ingredient recommender</b>. Based on the randomly generated baskets, it suggests the three most-similar ingredients per ingredient. This relationship between foods is pulled from the word2vec matrix that utilizes a cosine similarity metric. So in case you don’t have a particular ingredient in your kitchen, the recommender shows you some possible alternatives.
+
+One thing to note here, is that the basket will always consist of four ingredients (like the show) no matter how many food types you select.
+
+This app has been deployed and is also available here: <a href="https://chopped-basket-generator.herokuapp.com/" target="_blank">https://chopped-basket-generator.herokuapp.com/</a>
+
+---
+
+# Key Takeaways <a name="takeaway"></a>
+
+- The Chopped Mystery Baskets pulled from <b>clear food categories</b>. Examples like seafood, vegetables, and fruits were often included in each round.
+
+- However, just because the food type was available, this did not mean that it was required to be included in the basket. This was demonstrated by the appetizer and dessert baskets, in which there were a greater number of clusters/food-types than the number of ingredients used in each basket (usually four) for the show.
+
+- Last but not least, <b>human intuition and expertise is clearly needed</b> to organize a challenging but doable episode. It is clear why Food Network has culinary experts working on creating these baskets - the work that a machine can do is somewhat limited in terms of determining the relationship between foods.
+
+---
+
+# Future Considerations <a name="future"></a>
+
+- Get single-type clusters by adjusting k. Some groups seemed to be a mix of two clear food types so maybe more clusters are needed to comb those out.
+- Refine model to account for outliers. For example kiwi was in sauce/garnish instead of fruit.
+- Expand the base dataset for the similar ingredient recommender. This would provide a larger variety of recommendations.
+
+---
+
+# Link to Presentation <a name="link"></a>
+
+- <a href="https://github.com/eunchanity/davids_repo/blob/master/projects/project4_chopped/reports/project4_chopped.pdf" target="_blank">Presentation PDF in Github</a><br/>
