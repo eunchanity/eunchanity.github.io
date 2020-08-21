@@ -13,10 +13,9 @@ tags: [machine-learning, chopped, unsupervised learning, NLP, recommender]
 Chopped is a cooking series on the Food Network program that invites four chefs to come and cook dishes based on the ingredients in a mystery basket. There are three rounds (appetizer, entree, dessert) and one chef is eliminated each round based on the judges’ decision. What makes this show really interesting is that the mystery baskets have ingredients that you would think are impossible to combine to make an edible dish. However, Food Network has revealed that there is actually a culinary department that predetermines these baskets, which are just hard enough for the contestants.
 
 > "They don't want to make a basket that's impossible, just incredibly difficult."
->
-> Ted Allen, host of Chopped
+> -Ted Allen, host of Chopped
 
-![chopped]({{site.baseurl}}/assets/img/this-is-a-cooking-show-not-a-crying-show.png)
+![chopped]({{site.baseurl}}/assets/img/chopped_meme.png)
 
 This effort is probably why the show is so fun to watch and perhaps even intense. Given the seemingly random nature of these mystery baskets, I wanted to see if it was possible to draw out some pattern in the ingredients by clustering them. With those clusters, I decided to make my own Chopped basket recommender using all the ingredients that have ever appeared on the show so far.
 
