@@ -124,7 +124,7 @@ Using this data, I deployed a Streamlit app that takes in user input for each ro
 
 You can also see towards the bottom that there is a <b>similar ingredient recommender</b>. Based on the randomly generated baskets, it suggests the three most-similar ingredients per ingredient. This relationship between foods is pulled from the word2vec matrix that utilizes a cosine similarity metric. So in case you don’t have a particular ingredient in your kitchen, the recommender shows you some possible alternatives.
 
-One thing to note here, is that the basket will always consist of four ingredients (like the show) no matter how many food types you select.
+One thing to note is that the basket will always consist of four ingredients (like the show) no matter how many food types you select.
 
 This app has been deployed and is also available here: <a href="https://chopped-basket-generator.herokuapp.com/" target="_blank">https://chopped-basket-generator.herokuapp.com/</a>
 
