@@ -14,7 +14,7 @@ Chopped is a cooking series on the Food Network program that invites four chefs 
 
 > "They don't want to make a basket that's impossible, just incredibly difficult."
 >
-> - Ted Allen, Host of Chopped
+> Ted Allen, host of Chopped
 
 ![chopped]({{site.baseurl}}/assets/img/this-is-a-cooking-show-not-a-crying-show.png)
 
@@ -63,12 +63,10 @@ I utilized the above dataset from Kaggle, which contained the details of every C
 
 # Word Embedding <a name="model"></a>
 
-Given that the "documents" in my corpus were just single ingredients, I decided to use <b>word2vec</b> for my word embedding.
+Given that the "documents" in my corpus were just single ingredients, I decided to use <b>word2vec</b> for my word embedding. I then created a <b>gensim model</b> by using Google's publicly available pre-trained word embeddings.
 
-I created a <b>gensim model</b> by using Google's publicly available pre-trained word embeddings.
-
-> This can be downloaded here <a href="https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit" target="_blank">https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit</a>
-> Just note that this will require ~4GB of RAM to fit in memory
+> Google's model can be downloaded from the link below. Just note that this will require ~4GB of RAM to fit in memory.
+> <a href="https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit" target="_blank">https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit</a>
 
 Essentially, word2vec puts each ingredient into a 300-dimensional space (a vector that has 300 values) and this allows us to get some type of meaning/relationship between the words. By utilizing this model, you can see which words are most similar to each other. This idea was used for my <b>similar ingredient recommender</b>, which is explained below.
 
