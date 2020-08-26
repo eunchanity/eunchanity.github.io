@@ -122,7 +122,7 @@ The <b>dessert round</b> result in five clusters:
 
 Using this data, I deployed a Streamlit app that takes in user input for each round. Here you can see that the user is able to select the types of food they want to include in their basket. Then, the generator creates a basket of four random ingredients from the selected clusters/food groups.
 
-You can also see towards the bottom that there is a <b>similar ingredient recommender</b>. Based on the randomly generated baskets, it suggests the three most-similar ingredients per ingredient. This relationship between foods is pulled from the word2vec matrix that utilizes a cosine similarity metric. So in case you don’t have a particular ingredient in your kitchen, the recommender shows you some possible alternatives.
+You can also see towards the bottom that there is a <b>similar ingredient recommender</b>. Based on the randomly generated baskets, it suggests the three most-similar ingredients per ingredient. This relationship between foods is pulled from the <b>word2vec matrix that utilizes a cosine similarity metric</b>. So in case you don’t have a particular ingredient in your kitchen, the recommender shows you some possible alternatives.
 
 One thing to note is that the basket will always consist of four ingredients (like the show) no matter how many food types you select.
 
