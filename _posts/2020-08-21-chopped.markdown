@@ -136,7 +136,7 @@ This app has been deployed and is also available here: <a href="https://chopped-
 
 - However, just because the food type was available, this did not mean that it was required to be included in the basket. This was demonstrated by the appetizer and dessert baskets, in which there were a greater number of clusters/food-types than the number of ingredients used in each basket (usually four) for the show.
 
-- Last but not least, <b>human intuition and expertise is clearly needed</b> to organize a challenging but doable episode. It is clear why Food Network has culinary experts working on creating these baskets - the work that a machine can do is somewhat limited in terms of determining the relationship between foods.
+- Last but not least, <b>human intuition and expertise are clearly needed</b> to organize a challenging but doable episode. It is clear why Food Network has culinary experts working on creating these baskets - the work that a machine can do is somewhat limited in terms of determining the relationship between foods.
 
 ---
 
