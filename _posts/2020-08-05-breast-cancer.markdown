@@ -96,6 +96,8 @@ The model coefficients show the relative effect of the characteristics on the od
 
 This is a flask app that I created to demonstrate the effects of the characteristics on the odds of a tumor being benign or malignant. Just like the graph above, the app reinforces the idea that cell degradation and tumor growth have the greatest effect on malignant odds.
 
+This app has been deployed and is also available here: <a href="https://breast-cancer-tumor-classifer.herokuapp.com/" target="_blank">https://breast-cancer-tumor-classifer.herokuapp.com/</a>
+
 ---
 
 # Key Takeaways <a name="takeaway"></a>
