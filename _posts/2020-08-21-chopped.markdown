@@ -63,7 +63,7 @@ I utilized the above dataset from Kaggle, which contained the details of every C
 
 # Word Embedding <a name="model"></a>
 
-Word embedding is a natural language processing technique that maps text to vectors of real numbers. This representation allows us to derive relational value between words. Given that the "documents" in my corpus were just single ingredients, it made sense to use word embeddings to vectorize each word. This was done through <b>transfer learning</b>: a gensim model was trained utilizing Google's <b>Word2vec</b>. Essentially, I was able to borrow the pre-trained set of word embeddings from Google and apply it to my own model.
+Word embedding is a natural language processing technique that maps text to vectors. This representation allows us to derive relational value between words. Given that the "documents" in my corpus were just single ingredients, it made sense to use word embeddings to vectorize each word. This was done through <b>transfer learning</b>: a gensim model was trained utilizing Google's <b>Word2vec</b>. Essentially, I borrowed the pre-trained set of word embeddings from Google and applied it to my own model.
 
 > Google's model can be downloaded from the link below. Just note that this will require ~4GB of RAM to fit in memory.
 > <a href="https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit" target="_blank">https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit</a>
