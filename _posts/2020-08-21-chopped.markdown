@@ -39,7 +39,7 @@ This effort is probably why the show is so fun to watch and perhaps even intense
 ## Goals: <a name="goal"></a>
 
 - Use <b>word embedding</b> to convert each individual ingredient into vectors
-  > word2vec
+  > Word2vec
 - Select a <b>clustering model</b> that will group the ingredients for labeling:
   > k-means clustering, hierarchical clustering
 - Understand the importance of <b>human intuition</b> for food relationships
@@ -63,12 +63,12 @@ I utilized the above dataset from Kaggle, which contained the details of every C
 
 # Word Embedding <a name="model"></a>
 
-Given that the "documents" in my corpus were just single ingredients, I decided to use <b>word2vec</b> for my word embedding. I then created a <b>gensim model</b> by using Google's publicly available pre-trained word embeddings.
+Word embedding is a natural language processing technique that maps text to vectors of real numbers. This representation allows us to derive relational value between words. Given that the "documents" in my corpus were just single ingredients, it made sense to use word embeddings to vectorize each word. This was done through <b>transfer learning</b>: a gensim model was trained utilizing Google's <b>Word2vec</b>. Essentially, I was able to borrow the pre-trained set of word embeddings from Google and apply it to my own model.
 
 > Google's model can be downloaded from the link below. Just note that this will require ~4GB of RAM to fit in memory.
 > <a href="https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit" target="_blank">https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit</a>
 
-Essentially, word2vec puts each ingredient into a 300-dimensional space (a vector that has 300 values) and this allows us to get some type of meaning/relationship between the words. By utilizing this model, you can see which words are most similar to each other. This idea was used for my <b>similar ingredient recommender</b>, which is explained below.
+For my project, Word2vec put each ingredient into a 300-dimensional space (a vector that has 300 values) and this allowed me to get some type of meaning/relationship between the ingredients. By utilizing this model, you can see which words are most similar to each other. This idea was used for my <b>similar ingredient recommender</b>, which is explained below.
 
 ![word2vec]({{site.baseurl}}/assets/img/word2vec.png)
 
@@ -122,7 +122,7 @@ The <b>dessert round</b> result in five clusters:
 
 Using this data, I deployed a Streamlit app that takes in user input for each round. Here you can see that the user is able to select the types of food they want to include in their basket. Then, the generator creates a basket of four random ingredients from the selected clusters/food groups.
 
-You can also see towards the bottom that there is a <b>similar ingredient recommender</b>. Based on the randomly generated baskets, it suggests the three most-similar ingredients per ingredient. This relationship between foods is pulled from the <b>word2vec matrix that utilizes a cosine similarity metric</b>. So in case you don’t have a particular ingredient in your kitchen, the recommender shows you some possible alternatives.
+You can also see towards the bottom that there is a <b>similar ingredient recommender</b>. Based on the randomly generated baskets, it suggests the three most-similar ingredients per ingredient. This relationship between foods is pulled from the <b>Word2vec matrix that utilizes a cosine similarity metric</b>. So in case you don’t have a particular ingredient in your kitchen, the recommender shows you some possible alternatives.
 
 One thing to note is that the basket will always consist of four ingredients (like the show) no matter how many food types you select.
 
