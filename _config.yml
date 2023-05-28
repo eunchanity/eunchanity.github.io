@@ -10,7 +10,7 @@ site-twitter: #if your site has a twitter account, enter it here
 # Author Settings
 author: David Weon # add your name
 author-img: david-weon.jpeg # add your photo
-about-author: A data scientist who loves wrestling with data - and winning # add description
+about-author: A data scientist who loves wrestling with data - *and winning* # add description
 # social-twitter: # add your Twitter handle
 # social-facebook: # add your Facebook handle
 social-github: eunchanity # add your Github handle
