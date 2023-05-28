@@ -1,6 +1,6 @@
-# David Weon's Data Science Blog
+# David Weon's Data Science Portfolio
 
-Welcome! This is my GitHub repo that stores the code for my data science blog. The majority of the posts are about the projects that I completed during my time at Metis. However, I will occasionally post about some other topics such as jekyll themes, data science questions, and life updates.
+Welcome! This is my GitHub repo that stores the code for my portfolio of data science projects. My posts will walk you through the project starting from project conception, data collection, data modeling, data analysis, and key conclusions.
 
 Feel free to check out the blog [here](http://eunchanity.github.io/)!
 

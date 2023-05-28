@@ -1,10 +1,7 @@
 title: Hi! I'm David Weon
 description: > # this means to ignore newlines until "baseurl:"
-  Welcome to My Data Science Blog!
-  I consider myself just an 'Average Joe' that is really fascinated with data and its applications. 
-  I aim to ask the right questions before any solution and love to craft stories out of the raw numbers.  
-
-  This blog will mainly contain my projects for the Metis Data Science Bootcamp but I will also occasionally include my thoughts about the experience.
+  Welcome to my project portfolio!
+  This blog will contain various data science projects that I have worked on throughout the years.
 permalink: ":title/"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "eunchanity.github.io" # the base hostname & protocol for your site, e.g. http://example.com
@@ -13,7 +10,7 @@ site-twitter: #if your site has a twitter account, enter it here
 # Author Settings
 author: David Weon # add your name
 author-img: david-weon.jpeg # add your photo
-about-author: A data scientist who aims to ask the <b> right questions </b> and loves to <b> craft stories</b> # add description
+about-author: A data scientist who loves wrestling with data - and winning # add description
 # social-twitter: # add your Twitter handle
 # social-facebook: # add your Facebook handle
 social-github: eunchanity # add your Github handle
