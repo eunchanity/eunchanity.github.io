@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Deciding Between a Rideshare and a Taxi in NYC"
-date: 2020-09-16 10:32:20 +0300
+date: 2023-05-01 10:32:20 +0300
 description: Use a convolutional neural network (CNN) model to classify speech emotion and speaker gender. Create an app that processes input audio and notifies user of speech emotion and speaker gender. # Add post description (optional)
 img: convo_image.png # Add image post (optional)
 fig-caption: <a href="https://www.insperity.com/blog/managing-emotional-employees/" target="_blank">Image Source</a>
@@ -10,7 +10,7 @@ tags: [machine-learning, neural-network, CNN, deep-learning, audio-analysis]
 
 # Introduction <a name="introduction">
 
-Around 38.2 million Americans have reported some degree of hearing loss last year, which is around 14.3% of the population. I actually fall into this group as well as I was born with slight hearing impairment in my right ear. Luckily, it’s not to the point where it affects my everyday life or ability to work, but I do occasionally feel the impact of mishearing or misunderstanding what other people say. From personal experience, the toughest part in trying to communicate with someone that is hearing-impaired is the initial contact. How do you alert someone that has trouble hearing from far away without running over and tapping their shoulder? If that person is deaf, how do you express the emotion or intent of your words?
+IN PROGRESS - Around* 38.2 million Americans have reported some degree of hearing loss last year, which is around 14.3% of the population. I actually fall into this group as well as I was born with slight hearing impairment in my right ear. Luckily, it’s not to the point where it affects my everyday life or ability to work, but I do occasionally feel the impact of mishearing or misunderstanding what other people say. From personal experience, the toughest part in trying to communicate with someone that is hearing-impaired is the initial contact. How do you alert someone that has trouble hearing from far away without running over and tapping their shoulder? If that person is deaf, how do you express the emotion or intent of your words?
 
 In response to this, I thought it would be a great idea to come up with an alerting system prototype that notifies people of the speaker’s gender and emotion.
 

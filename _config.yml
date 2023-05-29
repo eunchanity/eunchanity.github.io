@@ -1,7 +1,7 @@
-title: Hi! I'm David Weon
+title: David Weon - DS Portfolio
 description: > # this means to ignore newlines until "baseurl:"
-  Welcome to my project portfolio!
-  This blog will contain various data science projects that I have worked on throughout the years.
+  Welcome to my portfolio of data science projects!
+  Each post will outline a project that I worked on with access to the underlying data analysis.
 permalink: ":title/"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "eunchanity.github.io" # the base hostname & protocol for your site, e.g. http://example.com
@@ -10,7 +10,7 @@ site-twitter: #if your site has a twitter account, enter it here
 # Author Settings
 author: David Weon # add your name
 author-img: david-weon.jpeg # add your photo
-about-author: A data scientist who loves wrestling with data - and <i>winning</i> # add description
+about-author: A data scientist who loves solving problems and the creative process to get there # add description
 # social-twitter: # add your Twitter handle
 # social-facebook: # add your Facebook handle
 social-github: eunchanity # add your Github handle
